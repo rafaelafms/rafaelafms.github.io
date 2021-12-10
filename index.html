@@ -1,152 +1,202 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Javascript - Arrays</title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+        <title>Aluno e professor IC</title>
+
+        <style type="text/css" media="screen">
+            *
+            {
+                margin: 0;
+                padding: 0;
+            }
+            html, body
+            {
+                height: 100%;
+            }
+            body
+            {
+                height: 100%;
+                font-size: 76%;
+                background: #FFFFFF;
+            }
+            #wrapper
+            {
+                margin-left: 18px;
+                font: normal 2.3ex/1.5 sans-serif;
+                min-height: 100%;
+                background: #FFFFFF url(https://fedoraproject.org/static/images/border-right.png) 100% 0 repeat-y;
+                padding-right: 18px;
+            }
+            #content
+            {
+                margin: 0 2ex;
+                margin-left: 50px;
+                background: red;
+                padding: 1ex 1ex 120px;
+                color: #666666;
+                background: #FFFFFF;
+            }
+            #content h2
+            {
+                font-size: 3.25ex;
+                margin-left: 50px; 
+                color: #1c3e61;
+            }
+            #content img
+            {
+                margin-left: 50px; 
+            }
+            #sidebar
+            {
+                float: left;
+                width: 400px;
+                margin: 2ex 0;
+                background: #daebf0;
+            }
+            .nav
+            {
+                margin: 0 10px;
+                padding: 0 1.5ex;
+            }
+            .nav h2
+            {
+                border-bottom: 5px dotted #12067e;
+                color: #5b83f3;
+                font-size: 100%;
+                margin: 2ex 0 1ex;
+                text-transform: uppercase;
+                font-weight: normal;
+            }
+            .nav ul
+            {
+                margin-left: 15px;
+            }
+            .nav li
+            {
+                margin: 0.25ex 1ex;
+                color: #1e294b;
+                font-size: 100%;
+            }   
+            .nav a
+            {
+                font-weight: bold;
+                margin-right: 0.75ex;
+                color: #1e294b;
+            }   
+            .nav ol li 
+            {
+                margin-left: 20px;
+                color: #1e294b;
+            }
+            .nav p
+            {
+                margin-left: 20px;
+            }
+        </style>    
     </head>
-
     <body>
-        <p>Click the button to display a String version of some arrays.</p>
-
-        <button onclick="createNodes()">Try it</button>
-
-        <div id="div1" ondblclick = "funcDel()">
-            <p
-                id="teams"
-                style="
-                    text-align: center;
-                    font-family: cursive;
-                    font-size: larger;
-                "
-            ></p>
-            <p id="tweets"></p>
+        <div id="wrapper">
+            <p><a href = "https://dcc.ufrj.br"><img src = "logo nova.png"></a></p>
+            <div id="sidebar">
+                <div class="nav">
+                    <h2>Sobre o curso</h2>
+                    <ul>
+                        <li><a href="http://dcc.ufrj.br">Site</a></li>
+                        <li><a href="https://dcc.ufrj.br/ensino/graduacao/disciplinas-computacao-2">Currículo acadêmico</a></li>
+                        <li><a href="https://xn--graduao-2wa9a.ufrj.br/images/_PR-1/CEG/Resolucoes/2020-2029/RESCEG-2021_05.pdf">Calendário</a></li>
+                      </ul>
+                    <h2>Sobre o aluno</h2>
+                    <ul>
+                        <li>
+                            <a>Informações para contato:</a>
+                            <ol>
+                                <li>E-mail: aluno@dcc.ufrj.br</li>
+                                <li><a href="https://br.linkedin.com">Linkedin</a></li>
+                                <li><a href="https://www.instagram.com/">Instagram</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a>Andamento do curso:</a>
+                            <ul>
+                                <li> Matérias obrigatórias completas: </li>
+                                <p>
+                                    <input type="checkbox">Sistema de informação<br>
+                                    <input type="checkbox">Computação 1<br>
+                                    <input type="checkbox"/>Cálculo 1<br>
+                                    <input type="checkbox"/>Números inteiros e criptografia<br>
+                                    <input type="checkbox"/>Fundamentos da computação<br><br>
+                                    <input type="checkbox"/>Cálculo 2<br>
+                                    <input type="checkbox"/>Computação 2<br>
+                                    <input type="checkbox"/>Circuitos lógicos<br>
+                                    <input type="checkbox"/>Matemática combinatória<br>
+                                    <input type="checkbox"/>Organização da informação<br><br>
+                                </p>
+                                </ol>
+                                <li> Eletivas completas:
+                                    <p>
+                                        <input type="checkbox"/>Nome das eletivas do curso<br>
+                                    </p>
+                            </ul>
+                        </li>
+                        <li><a href="https://www.canva.com/pt_br/criador/editor-curriculo-v1/?utm_source=google_sem&utm_medium=cpc&utm_campaign=REV_BR_PT_CanvaPro_Resume_EM&utm_term=REV_BR_PT_CanvaPro_Online_CV_EM&gclid=CjwKCAiAksyNBhAPEiwAlDBeLPdSpC5GHg5wKsO5foQPtMObxlY-V8vcuPWDduB8yWiVfXBjENqz1BoCswcQAvD_BwE&gclsrc=aw.ds">Currículo</a></li>
+                        <li><a href="https://www.notion.so/login">Projetos</a></li>
+                      </ul>
+                </div>
+            </div>
+            <div id="content">
+                <img src="perfil.png">
+                <h2>Nome do aluno</h2>
+            </div>
         </div>
-
-        <script type="text/javascript">
-            function interleave(arr1, arr2) {
-                return arr1.reduce(
-                    (accumulator, currentValue, currentIndex) => {
-                        return arr2[currentIndex] == undefined
-                            ? accumulator // arr2 is over.
-                            : accumulator.concat(
-                                  `${currentValue.toString()} - ${
-                                      arr2[currentIndex]
-                                  }`
-                              );
-                    },
-                    []
-                );
-            }
-
-            function createNodes() {
-                var indices = [...Array(10).keys()]; // spread operator
-
-                var teams = new Array();
-
-                teams[0] = "Fluminense";
-
-                teams[1] = "Flamengo";
-
-                if (typeof createNodes.counter == "undefined") {
-                    // No counter yet? ... perform the initialization
-                    createNodes.counter = 0;
-                } else {
-                    ++createNodes.counter;
-                }
-
-                var x = teams.join(", ").toString();
-
-                document.getElementById(
-                    "teams"
-                ).innerHTML = `&lt;div1&gt;\n\nArray teams = [${x}]`;
-
-                var tweets = [
-                    "Joe Biden got 306 delegates!",
-                    "Donald Trump got 232 delegates!",
-                ];
-
-                tweets.push("Game over and go back to work!");
-
-                let i = createNodes.counter % tweets.length;
-
-                var result = interleave(indices, tweets);
-                result[i] = `<mark>${result[i]}</mark>`;
-
-                document.getElementById(
-                    "tweets"
-                ).innerHTML = `Array tweets = <br>${result
-                    .join("<br>")
-                    .toString()}`;
-
-                // replace 1 element staring at i
-                tweets.splice(i, 1, "Vice President!", "Kamala Harris");
-
-                console.log(tweets);
-
-                result = interleave(indices, tweets);
-
-                var para = document.createElement("p"); // Create a <p> element
-                // Create a text node
-                var node = document.createTextNode(
-                    `tweets.splice_${
-                        createNodes.counter
-                    } (${i},1,'Vice President!', 'Kamala Harris') =\n${result
-                        .join("\n")
-                        .toString()}`
-                );
-                para.appendChild(node); // Append node to <p>
-                var element = document.getElementById("div1");
-                element.appendChild(para); // Append <p> to <div> with id="div1"
-                document.body.style = "white-space: pre;";
-                element.style.background = "lightgray";
-
-                element.style.border = "thick solid #0000FF";
-                element.style.width = "400px";
-                element.style.paddingLeft = "10px";
-
-                // set a unique id
-                para.setAttribute("id", `para${createNodes.counter.toString()}`);
-
-                para.style.border = "thick solid red";
-                para.style.width = "370px";
-                para.style.paddingLeft = "10px";
-                para.style.fontFamily = "Times New Roman";
-
-                // check that the new id has been created
-                document.getElementById(
-                    `para${createNodes.counter.toString()}`
-                ).style.background = "antiquewhite";
-
-                document.getElementById(
-                    `para${createNodes.counter.toString()}`
-                ).onclick = function() {
-                    document.getElementById(this.id).style.display = "none";
-                }
-            }
-
-            //remove o ultimo elemento
-            function funcDel() {  
-                var element = document.getElementById("div1"); 
-                element.removeChild(element.lastChild);
-            }
-
-            //volta com os paragrafos tracejados
-            window.onkeydown = function (event) {
-                if(event.ctrlKey && event.key === "Escape"){
-                    var cont = document.getElementById("div1").children.length;
-                    for(let i=0;i<cont;i++){
-                        var x = document.getElementById(`para${i.toString()}`);
-                        if (x.style.display === 'none') {
-                            x.style.display = 'block';
-                            x.style.border = "thick dashed red";
-                        } 
-                    }
-                }
-            }
-
-            document.writeln(
-                "\nA new <span style='color: red'>Node</span> will be created..."
-            );
-            document.write("to hold the spliced output.");
-        </script>
+    </body>
+    <body>
+        <div id="wrapper">
+            <p><a href = "https://dcc.ufrj.br"><img src = "logo nova.png"></a></p>
+            <div id="sidebar">
+                <div class="nav">
+                    <h2>Sobre o curso</h2>
+                    <ul>
+                        <li><a href="http://dcc.ufrj.br">Site</a></li>
+                        <li><a href="https://dcc.ufrj.br/ensino/graduacao/disciplinas-computacao-2">Currículo acadêmico</a></li>
+                        <li><a href="https://xn--graduao-2wa9a.ufrj.br/images/_PR-1/CEG/Resolucoes/2020-2029/RESCEG-2021_05.pdf">Calendário</a></li>
+                      </ul>
+                    <h2>Sobre o professor</h2>
+                    <ul>
+                        <li>
+                            <a>Informações para contato:</a>
+                            <ol>
+                                <li>E-mail: professor@ic.ufrj.br</li>
+                                <li>Sala na UFRJ: prédio, bloco, número da sala</li>
+                                <li>Página do IC: dcc.ufrj.br/~nomeprofessor</a></li>
+                                <li><a href="https://br.linkedin.com">Linkedin</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a>Matérias lecionadas:</a>
+                            <ul>
+                                <li> Obrigatórias: </li>
+                                <ul>
+                                    <li>Computação 1<br>
+                                    <li>Computação 2<br>
+                                </ul>
+                                </ol>
+                                <li> Eletivas:
+                                    <p>
+                                        Nome das eletivas do curso<br>
+                                    </p>
+                            </ul>
+                        </li>
+                        <li><a href="https://www.canva.com/pt_br/criador/editor-curriculo-v1/?utm_source=google_sem&utm_medium=cpc&utm_campaign=REV_BR_PT_CanvaPro_Resume_EM&utm_term=REV_BR_PT_CanvaPro_Online_CV_EM&gclid=CjwKCAiAksyNBhAPEiwAlDBeLPdSpC5GHg5wKsO5foQPtMObxlY-V8vcuPWDduB8yWiVfXBjENqz1BoCswcQAvD_BwE&gclsrc=aw.ds">Currículo</a></li>
+                        <li><a href="https://lattes.cnpq.br/">Projetos</a></li>
+                      </ul>
+                </div>
+            </div>
+            <div id="content">
+                <img src="perfil professor.png">
+                <h2>Nome do professor</h2>
+            </div>
+        </div>
     </body>
 </html>
