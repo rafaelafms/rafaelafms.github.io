@@ -1,304 +1,152 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8" />
-        <title>O cinema através das décadas</title>
+        <title>Javascript - Arrays</title>
     </head>
 
     <body>
-        <h1 id="top"; style="text-align: center; font-size: 300%">O cinema através das décadas</h1>
-        <div style="float: right">
-            <a href="https://cinematografico.com.br/2016/02/a-evolucao-das-cameras-no-cinema-digital/">
-                <img
-                    src="https://img.elo7.com.br/product/zoom/33CC5F6/adesivo-de-parede-33x40cm-camera-filmadora-classica-r0887-adesivo-de-parede.jpg"
-                    width=400
-                    height=500
-                />
-            </a>
+        <p>Click the button to display a String version of some arrays.</p>
+
+        <button onclick="createNodes()">Try it</button>
+
+        <div id="div1" ondblclick = "funcDel()">
+            <p
+                id="teams"
+                style="
+                    text-align: center;
+                    font-family: cursive;
+                    font-size: larger;
+                "
+            ></p>
+            <p id="tweets"></p>
         </div>
 
-        <h2><ins>As décadas</ins></h2>
-        <ol>
-            <li><h3><ins>1880 - 1899</ins></h3>
-                <p style="width: 500px; text-align: justify" ;>
-                    A maioria das primeiras sequências fotográficas (cronofotografia), não se destinava 
-                    inicialmente a ser vista em movimento e era tipicamente apresentada como um método sério 
-                    de <strong>estudar o movimento</strong>. As sequências envolviam quase que exclusivamente 
-                    humanos ou animais realizando um movimento simples na frente da câmera. Com a publicação dos 
-                    cartões do gabinete <em>The Horse in Motion</em>, o fotógrafo Eadweard Muybridge começou a 
-                    fazer centenas de estudos cronofotográficos do movimento de animais e humanos em tempo real. 
-                    Em 1879, Muybridge começou a dar aulas sobre locomoção animal e usou seu Zoopraxiscope para 
-                    projetar animações dos contornos de suas gravações, traçados em discos de vidro. 
-                </p>
-                <img 
-                    src="https://ccbdc786-a-62cb3a1a-s-sites.googlegroups.com/site/adairarthistory/iv-later-europe-and-americas/117-the-horse-in-motion-eadweard-muybridge/muybridge-9.jpg?attachauth=ANoY7cq3r_fDV3UKUn4c1xTL6gvU1PpFybaYfrpPA9wjQGst5vgg3yE1J5_8aJ7qJje1HVWcYvfLeB9LE470sD-apn4FrM7B0ZiN7J8czGiV8K_zsK1_GvQU2qQC1JqlzG8NbOZlw3cH6bk9vdWwrdXd2HdHp_OHbbmb-6EaVbYhubo_3bPPe2CnZZ5iWC3wtYSeTzcMLvHINXzqRj8QYjgLWRMCd-T8x8u5E89HWNZPtnAaMGMXv5c9VgqH6bCke_5YH9sduI8fj4iruQcU_QgkqeQQSwRebWAmzZPX1t6hbkTy_pOKHdJhsAqNIXvD8mdiE47A6jDB&attredirects=0" 
-                    width="500"
-                />
-                <p style="width: 500px; text-align: justify" ;>
-                    O artista e inventor francês Louis Le Prince criou a primeira câmera capaz de filmar movimentos. 
-                    Ele gravou o primeiro filme conhecido existente em <strong>14 de outubro de 1888</strong>. O filme, 
-                    mais tarde conhecido como <a href="https://www.youtube.com/watch?v=8AzgoUFRw7k"><em>Roundhay Garden Scene</em></a>, 
-                    foi um filme real que durou 1,66 segundos e retratou brevemente a família de Le Prince em movimento.
-                </p>
-                <p style="width: 500px; text-align: justify" ;>
-                    A utilização do filme como artístico não é claramente definida, 
-                    entetanto, a exibição comercial e pública de 
-                    dez curtas-metragens dos irmãos Lumière em Paris em <strong>28 de 
-                    dezembro de 1895</strong> pode ser considerada como o avanço da 
-                    projeção de filmes cinematográficos. 
-                </p>
-                <p style="width: 500px; text-align: justify" ;>
-                    Alguns outros projetos foram lançados anteriormente, mas eles careciam 
-                    de qualidade, suporte financeiro, resistência ou sorte para encontrar o 
-                    ímpeto que impulsionou o cinématographe Lumière ao sucesso mundial.
-                </p>
-                <a href="https://www.youtube.com/watch?v=lW63SX9-MhQ">
-                    <img 
-                        src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Poster_Cinematographe_Lumiere_cr.jpg" 
-                        width="500"
-                    />
-                </a>
-                <p style="width: 500px; text-align: justify" ;>
-                    (ao clicar na imagem os curtas serão exibidos) 
-                </p>
-            </li>
-            <li><h3><ins>1900 - 1950</ins></h3>
-                <p style="width: 500px; text-align: justify" ;>
-                    O primeiro teatro permanente de sucesso mostrando nada além de filmes foi "The Nickelodeon", 
-                    em Pittsburgh (1905). Nessa data, havia finalmente filmes de vários minutos disponíveis para 
-                    preencher um programa em execução por pelo menos meia hora, e que poderia ser trocado semanalmente.
-                </p>
-                <p style="width: 500px; text-align: justify" ;>
-                    O primeiro longa-metragem de animação do mundo foi <em>El Apóstol</em> (1917), do cartunista <strong>Quirino Cristiani</strong> 
-                    utilizando recortes de animação. 
-                    <form action="https://en.wikipedia.org/wiki/El_Ap%C3%B3stol">
-                        <p><input type="submit" value="Clique para mais informações" /></p>
-                    </form>
-                </p>
-                <p style="width: 500px; text-align: justify" ;>
-                    No final de 1927, a <strong>Warners</strong> lançou <em>The Jazz Singer</em> , que continha 
-                    o que é considerado o primeiro diálogo sincronizado (e canto) em um longa-metragem. A partir desse impulsiono
-                    uma nova era começou, deixando-nos grandes clássicos, como, os primeiros <em>filmes de Walt Disney</em>, <em>Mágico de Oz</em>, <em>E o Vento
-                    Levou</em>, ...
-                </p>
-                <a href="https://www.youtube.com/watch?v=5fzZFQBXSLM">
-                    <img 
-                        src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Walt_Disney_Snow_white_1937_trailer_screenshot_%2813%29.jpg" 
-                        width="500"
-                    />
-                </a>
-            </li>
-            <li><h3><ins>1951 - 2000</ins></h3>
-                <p style="width: 500px; text-align: justify" ;>
-                    Durante a década de 1980, o público começou a assistir cada vez mais a filmes em seus videocassetes. No início daquela década, 
-                    os estúdios de cinema tentaram uma ação legal para proibir a propriedade de videocassetes como violação de direitos autorais, 
-                    o que não teve sucesso. Por fim, a venda e o aluguel de filmes em vídeo doméstico se tornaram um "segundo local" significativo 
-                    para a exibição de filmes e uma fonte adicional de receita para as indústrias cinematográficas.
-                </p>
-                <p style="width: 500px; text-align: justify" ;>
-                    A combinação <a href="https://en.wikipedia.org/wiki/George_Lucas">Lucas</a> - <a href="https://en.wikipedia.org/wiki/Steven_Spielberg">Spielberg</a> 
-                    dominaria o cinema de <strong>Hollywood</strong> por grande parte da década de 1980
-                </p>
-                <p style="width: 500px; text-align: justify" ;>
-                    O início da década de 1990 viu o desenvolvimento de um cinema independente de sucesso comercial nos Estados Unidos. Embora o 
-                    cinema fosse cada vez mais dominado por filmes de efeitos especiais, filmes independentes tiveram sucesso comercial significativo, 
-                    tanto no cinema e em home vídeo.
-                </p>
-                <a href="https://diariodoestadogo.com.br/os-10-diretores-de-cinema-mais-influentes-98878/">
-                    <img 
-                        src="http://www.baconfrito.com/wp-content/uploads/2012/06/directors_big2.gif" 
-                        width="500"
-                    />
-                </a>
-            </li>
-            <li><h3><ins>2000 - 2021</ins></h3>
-                <p style="width: 500px; text-align: justify" ;>
-                    Desde o final dos anos 2000, as plataformas de streaming (como Youtube) fornecem meios para que qualquer 
-                    pessoa com acesso à internet e câmeras publique vídeos para o mundo. Também competindo com a crescente 
-                    <strong>popularidade dos videogames</strong> e outras formas de entretenimento doméstico, a indústria voltou a tornar os 
-                    lançamentos nos cinemas mais atraentes, com <strong>novas tecnologias e filmes épicos </strong>(fantasia e super-heróis) 
-                    se tornando um caminho dos cinemas.
-                </p>
-                <p style="width: 500px; text-align: justify" ;>
-                    Em 2011, as maiores indústrias cinematográficas em número de filmes produzidos eram as da <strong>Índia, Estados Unidos, 
-                    China, Nigéria e Japão</strong>.
-                </p>
-                <a href="https://www.youtube.com/watch?v=g6ng8iy-l0U">
-                    <img 
-                        src="https://images.squarespace-cdn.com/content/v1/59d7e2c7e45a7c0ce235bb55/1556292830701-LR849KLULMTLSWOSGSX0/Avengers-Endgame-Film-Review.jpg" 
-                        width="500"
-                    />
-                </a>
-            </li>
-        </ol>
+        <script type="text/javascript">
+            function interleave(arr1, arr2) {
+                return arr1.reduce(
+                    (accumulator, currentValue, currentIndex) => {
+                        return arr2[currentIndex] == undefined
+                            ? accumulator // arr2 is over.
+                            : accumulator.concat(
+                                  `${currentValue.toString()} - ${
+                                      arr2[currentIndex]
+                                  }`
+                              );
+                    },
+                    []
+                );
+            }
 
-        <h2><ins>Sobre números</ins></h2>
-        <ul>
-            <li><h3>Maiores bilheterias do cinema</h3>
-                <table border="1">
-                    <thead>
-                        <tr>
-                            <th>Posição</th>
-                            <th>Filme</th>
-                            <th>Ano de lançamento</th>
-                            <th>Valor arrecadado</th>
-                        </tr>
-                    </thead>
+            function createNodes() {
+                var indices = [...Array(10).keys()]; // spread operator
 
-                    <tr>
-                        <td>1</td>
-                        <td>Avatar</td>
-                        <td>2009</td>
-                        <td>2 847 246 203</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Vingadores: Ultimato</td>
-                        <td>2019</td>
-                        <td>2 797 800 564</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Titanic</td>
-                        <td>1997</td>
-                        <td>2 201 647 264</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Star Wars: O Despertar da Força</td>
-                        <td>2015</td>
-                        <td>2 068 223 624</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Vingadores: Guerra Infinita</td>
-                        <td>2018</td>
-                        <td>2 048 359 754</td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Jurassic World</td>
-                        <td>2015</td>
-                        <td>1 671 713 208</td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>O Rei Leão</td>
-                        <td>2019</td>
-                        <td>1 656 943 394</td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>Os Vingadores</td>
-                        <td>2012</td>
-                        <td>1 518 812 988</td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
-                        <td>Velozes e Furiosos 7</td>
-                        <td>2015</td>
-                        <td>1 516 045 911</td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td>Frozen 2</td>
-                        <td>2019</td>
-                        <td>1 450 026 933</td>
-                    </tr>
-                </table>
-            </li>
+                var teams = new Array();
 
-            <li><h3>Já ocuparam a maior bilheteria mundial</h3>
-                <table border="1">
-                    <thead>
-                        <tr>
-                            <th>Filme</th>
-                            <th>Anos em primeiro lugar</th>
-                            <th>Valor arrecadado</th>
-                        </tr>
-                    </thead>
+                teams[0] = "Fluminense";
 
-                    <tr>
-                        <td>O Nascimento de uma Nação</td>
-                        <td>1915 - 1940</td>
-                        <td>15 000 000</td>
-                    </tr>
-                    <tr>
-                        <td>E o Vento Levou</td>
-                        <td>1940 - 1960</td>
-                        <td>59 000 000</td>
-                    </tr>
-                    <tr>
-                        <td>Os Dez Mandamentos</td>
-                        <td>1960 - 1961</td>
-                        <td>60 000 000</td>
-                    </tr>
-                    <tr>
-                        <td>E o Vento Levou</td>
-                        <td>1961 - 1963</td>
-                        <td>67 000 000</td>
-                    </tr>
-                    <tr>
-                        <td>A Noviça Rebelde</td>
-                        <td>1963 - 1969</td>
-                        <td>112 500 000</td>
-                    </tr>
-                    <tr>
-                        <td>E o Vento Levou</td>
-                        <td>1969 - 1971</td>
-                        <td>116 000 000</td>
-                    </tr>
-                    <tr>
-                        <td>O Poderoso Chefão</td>
-                        <td>1971 - 1973</td>
-                        <td>131 800 000</td>
-                    </tr>
-                    <tr>
-                        <td>Tubarão</td>
-                        <td>1973 - 1976</td>
-                        <td>193 700 000</td>
-                    </tr>
-                    <tr>
-                        <td>Star Wars</td>
-                        <td>1976 - 1982</td>
-                        <td>518 000 000</td>
-                    </tr>
-                    <tr>
-                        <td>ET</td>
-                        <td>1983 - 1986</td>
-                        <td>724 304 427</td>
-                    </tr>
-                    <tr>
-                        <td>Jurassic Park</td>
-                        <td>1987 - 1994</td>
-                        <td>914 691 118</td>
-                    </tr>
-                    <tr>
-                        <td>Titanic</td>
-                        <td>1995 - 1998</td>
-                        <td>1 843 201 268</td>
-                    </tr>
-                    <tr>
-                        <td>Avatar</td>
-                        <td>2010 - 2019</td>
-                        <td>2 789 509 479</td>
-                    </tr>
-                    <tr>
-                        <td>Vingadores: Ultimato</td>
-                        <td>2019 - 2021</td>
-                        <td>2 797 501 328</td>
-                    </tr>
-                    <tr>
-                        <td>Avatar</td>
-                        <td>2021</td>
-                        <td>2 847 246 203</td>
-                    </tr>
-                </table>
-            </li>
-        </ul>
+                teams[1] = "Flamengo";
 
-        <p><a href="#top">Voltar ao início</a></p>
-        <p>&#169; Wikipedia</p>
+                if (typeof createNodes.counter == "undefined") {
+                    // No counter yet? ... perform the initialization
+                    createNodes.counter = 0;
+                } else {
+                    ++createNodes.counter;
+                }
 
+                var x = teams.join(", ").toString();
+
+                document.getElementById(
+                    "teams"
+                ).innerHTML = `&lt;div1&gt;\n\nArray teams = [${x}]`;
+
+                var tweets = [
+                    "Joe Biden got 306 delegates!",
+                    "Donald Trump got 232 delegates!",
+                ];
+
+                tweets.push("Game over and go back to work!");
+
+                let i = createNodes.counter % tweets.length;
+
+                var result = interleave(indices, tweets);
+                result[i] = `<mark>${result[i]}</mark>`;
+
+                document.getElementById(
+                    "tweets"
+                ).innerHTML = `Array tweets = <br>${result
+                    .join("<br>")
+                    .toString()}`;
+
+                // replace 1 element staring at i
+                tweets.splice(i, 1, "Vice President!", "Kamala Harris");
+
+                console.log(tweets);
+
+                result = interleave(indices, tweets);
+
+                var para = document.createElement("p"); // Create a <p> element
+                // Create a text node
+                var node = document.createTextNode(
+                    `tweets.splice_${
+                        createNodes.counter
+                    } (${i},1,'Vice President!', 'Kamala Harris') =\n${result
+                        .join("\n")
+                        .toString()}`
+                );
+                para.appendChild(node); // Append node to <p>
+                var element = document.getElementById("div1");
+                element.appendChild(para); // Append <p> to <div> with id="div1"
+                document.body.style = "white-space: pre;";
+                element.style.background = "lightgray";
+
+                element.style.border = "thick solid #0000FF";
+                element.style.width = "400px";
+                element.style.paddingLeft = "10px";
+
+                // set a unique id
+                para.setAttribute("id", `para${createNodes.counter.toString()}`);
+
+                para.style.border = "thick solid red";
+                para.style.width = "370px";
+                para.style.paddingLeft = "10px";
+                para.style.fontFamily = "Times New Roman";
+
+                // check that the new id has been created
+                document.getElementById(
+                    `para${createNodes.counter.toString()}`
+                ).style.background = "antiquewhite";
+
+                document.getElementById(
+                    `para${createNodes.counter.toString()}`
+                ).onclick = function() {
+                    document.getElementById(this.id).style.display = "none";
+                }
+            }
+
+            //remove o ultimo elemento
+            function funcDel() {  
+                var element = document.getElementById("div1"); 
+                element.removeChild(element.lastChild);
+            }
+
+            //volta com os paragrafos tracejados
+            window.onkeydown = function (event) {
+                if(event.ctrlKey && event.key === "Escape"){
+                    var cont = document.getElementById("div1").children.length;
+                    for(let i=0;i<cont;i++){
+                        var x = document.getElementById(`para${i.toString()}`);
+                        if (x.style.display === 'none') {
+                            x.style.display = 'block';
+                            x.style.border = "thick dashed red";
+                        } 
+                    }
+                }
+            }
+
+            document.writeln(
+                "\nA new <span style='color: red'>Node</span> will be created..."
+            );
+            document.write("to hold the spliced output.");
+        </script>
     </body>
 </html>
