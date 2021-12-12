@@ -131,7 +131,7 @@
 
             //volta com os paragrafos tracejados
             window.onkeydown = function (event) {
-                if(event.ctrlKey && event.key === "Escape"){
+                if(event.ctrlKey){
                     var cont = document.getElementById("div1").children.length;
                     for(let i=0;i<cont;i++){
                         var x = document.getElementById(`para${i.toString()}`);
